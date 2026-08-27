@@ -1,0 +1,44 @@
+{
+  "dependencies": {
+    "commitizen": "^4.3.2",
+    "lefthook-windows-x64": "^2.1.10"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
+    "@types/node": "^26.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "lefthook": "^2.1.10",
+    "oxfmt": "^0.65.0",
+    "oxlint": "^1.80.0",
+    "typescript": "^7.0.2",
+    "ultracite": "^7.10.6"
+  },
+  "name": "workflow-template",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "ultracite check",
+    "fix": "ultracite fix",
+    "prepare": "lefthook install"
+  },
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohanTran02/workflow-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohanTran02/workflow-template/issues"
+  },
+  "homepage": "https://github.com/JohanTran02/workflow-template#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

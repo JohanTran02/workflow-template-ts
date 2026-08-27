@@ -1,0 +1,5 @@
+remotes:
+  - git_url: https://github.com/JohanTran02/lefthook-configs
+    configs:
+      - configs/global.yml
+      - configs/ts.yml
