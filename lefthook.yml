@@ -3,3 +3,14 @@ remotes:
     configs:
       - configs/global.yml
       - configs/ts.yml
+
+ci:
+  parallel: true
+  commands:
+    audit-packages:
+      run: npm audit
+    lint:
+      run: npx ultracite check --quiet --type-aware --type-check
+      glob: "**/*.{js,jsx,ts,tsx,json,jsonc,css}"
+    build:
+      run: npm run build --if-present
