@@ -23,4 +23,4 @@ jobs:
         run: npm ci
 
       - name: Run lefthook CI checks
-        run: npm lefthook run ci
+        run: npx lefthook run ci
