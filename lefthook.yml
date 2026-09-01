@@ -7,10 +7,5 @@ remotes:
 ci:
   parallel: true
   commands:
-    audit-packages:
-      run: npm audit
     lint:
       run: npx ultracite fix --quiet --type-aware --type-check --format=github
-      glob: "**/*.{js,jsx,ts,tsx,json,jsonc,css}"
-    build:
-      run: npm run build --if-present

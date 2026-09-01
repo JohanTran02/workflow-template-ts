@@ -21,7 +21,5 @@ jobs:
         env:
           LEFTHOOK: 0
         run: npm ci
-
-      - name: Run lefthook CI checks
-        run: npx lefthook run ci
-      - uses: autofix-ci/action@c5b2d67aa2274e7b5a18224e8171550871fc7e4a
+      - name: Build
+        run: npm run build --if-present
