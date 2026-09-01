@@ -17,6 +17,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "oxlint",
+    "format": "oxfmt --no-error-on-unmatched-pattern",
+    "format:check": "oxfmt --check --no-error-on-unmatched-pattern",
     "check": "ultracite check",
     "fix": "ultracite fix",
     "prepare": "test -n \"$CI\" || lefthook install"
