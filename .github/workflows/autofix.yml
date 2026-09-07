@@ -16,5 +16,5 @@ jobs:
       - run: npm ci
         env:
           LEFTHOOK: 0
-      - run: npx lefthook run ci
+      - run: npx ultracite fix --quiet --type-aware --type-check --format=github
       - uses: autofix-ci/action@c5b2d67aa2274e7b5a18224e8171550871fc7e4a
