@@ -5,7 +5,6 @@ remotes:
       - configs/ts.yml
 
 ci:
-  parallel: true
   commands:
     lint:
       run: npx ultracite fix --quiet --type-aware --type-check --format=github
