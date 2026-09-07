@@ -3,8 +3,3 @@ remotes:
     configs:
       - configs/global.yml
       - configs/ts.yml
-
-ci:
-  commands:
-    lint:
-      run: npx ultracite fix --quiet --type-aware --type-check --format=github

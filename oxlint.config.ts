@@ -4,5 +4,9 @@ import react from "ultracite/oxlint/react";
 
 export default defineConfig({
   extends: [core, react],
-  ignorePatterns: [...(core.ignorePatterns ?? []), "**/.vscode/**"],
+  ignorePatterns: [
+    ...(core.ignorePatterns ?? []),
+    "**/.vscode/**",
+    "renovate.json",
+  ],
 });
