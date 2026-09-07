@@ -20,6 +20,7 @@
     "lint": "oxlint",
     "format": "oxfmt --no-error-on-unmatched-pattern",
     "format:check": "oxfmt --check --no-error-on-unmatched-pattern",
+    "renovate:validate": "npx --yes --package renovate -- renovate-config-validator",
     "check": "ultracite check",
     "fix": "ultracite fix",
     "prepare": "test -n \"$CI\" || lefthook install"
