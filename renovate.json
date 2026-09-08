@@ -18,7 +18,8 @@
     {
       "description": "Automerge lint and format updates",
       "matchDepTypes": ["devDependencies"],
-      "extends": ["packages:linters", "oxfmt", "@oxfmt/**"],
+      "matchPackageNames": ["oxfmt", "@oxfmt/**"],
+      "extends": ["packages:linters"],
       "automergeType": "pr",
       "automergeStrategy": "rebase",
       "automerge": true
