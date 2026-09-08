@@ -4,6 +4,7 @@
   "ignoreTests": false,
   "assignAutomerge": true,
   "timezone": "Europe/Paris",
+  "minimumReleaseAge": "14 days",
   "packageRules": [
     {
       "internalChecksFilter": "strict",
