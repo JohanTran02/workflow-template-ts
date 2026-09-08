@@ -4,12 +4,13 @@
   "ignoreTests": false,
   "assignAutomerge": true,
   "timezone": "Europe/Paris",
+  "minimumReleaseAge": "14",
   "packageRules": [
     {
-      "description": "Schedule automerge non-major updates on Monday mornings (before 4 AM)",
+      "description": "Schedule non-major updates during typical non-office hours on weekdays (10 PM - 5 AM)",
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "matchDepTypes": ["devDependencies"],
-      "automergeSchedule": ["* 0-3 * * 1"],
+      "schedule": "* 0-4,22-23 * * 1-5",
       "automergeType": "pr",
       "automergeStrategy": "rebase",
       "automerge": true
