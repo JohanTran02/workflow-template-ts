@@ -5,6 +5,9 @@
   "assignAutomerge": true,
   "timezone": "Europe/Paris",
   "minimumReleaseAge": "14 days",
+  "automerge": true,
+  "automergeStrategy": "rebase",
+  "automergeType": "pr",
   "packageRules": [
     {
       "internalChecksFilter": "strict",
