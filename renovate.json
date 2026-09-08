@@ -2,13 +2,22 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:best-practices"],
   "ignoreTests": false,
-  "prConcurrentLimit": 10,
-  "prHourlyLimit": 2,
+  "assignAutomerge": true,
+  "timezone": "Europe/Paris",
   "packageRules": [
     {
+      "description": "Schedule automerge non-major updates on Monday mornings (before 4 AM)",
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "matchDepTypes": ["devDependencies"],
       "automergeSchedule": ["* 0-3 * * 1"],
+      "automergeType": "pr",
+      "automergeStrategy": "rebase",
+      "automerge": true
+    },
+    {
+      "description": "Automerge lint and format updates",
+      "matchDepTypes": ["devDependencies"],
+      "extends": ["packages:linters", "oxfmt", "@oxfmt/**"],
       "automergeType": "pr",
       "automergeStrategy": "rebase",
       "automerge": true
