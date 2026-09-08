@@ -2,9 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:best-practices"],
   "ignoreTests": false,
-  "assignAutomerge": true,
-  "timezone": "Europe/Paris",
-  "minimumReleaseAge": "14",
   "packageRules": [
     {
       "description": "Schedule non-major updates during typical non-office hours on weekdays (10 PM - 5 AM)",
@@ -13,7 +10,10 @@
       "schedule": "* 0-4,22-23 * * 1-5",
       "automergeType": "pr",
       "automergeStrategy": "rebase",
-      "automerge": true
+      "automerge": true,
+      "assignAutomerge": true,
+      "timezone": "Europe/Paris",
+      "minimumReleaseAge": "14"
     },
     {
       "description": "Automerge lint and format updates",
@@ -22,7 +22,10 @@
       "extends": ["packages:linters"],
       "automergeType": "pr",
       "automergeStrategy": "rebase",
-      "automerge": true
+      "automerge": true,
+      "assignAutomerge": true,
+      "timezone": "Europe/Paris",
+      "minimumReleaseAge": "14"
     }
   ]
 }
