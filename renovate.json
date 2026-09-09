@@ -24,7 +24,6 @@
       "schedule": "* 0-3 * * 1",
       "matchPackageNames": ["oxlint", "oxfmt", "ultracite"],
       "groupName": "linters/formatters devdependencies(non-major)",
-      "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
     },
     {
