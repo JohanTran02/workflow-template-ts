@@ -5,10 +5,10 @@ on:
     branches-ignore:
       - "renovate/**"
   pull_request:
-  merge_group:
     branches:
       - "main"
       - "!renovate/**"
+  merge_group:
 
 permissions:
   contents: read
