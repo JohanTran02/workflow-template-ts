@@ -9,25 +9,29 @@
   ],
   "timezone": "Europe/Paris",
   "minimumReleaseAge": "14 days",
-  "automerge": true,
   "automergeStrategy": "rebase",
   "packageRules": [
     {
-      "internalChecksFilter": "strict",
-      "matchDatasources": ["npm"],
-      "minimumReleaseAge": "14 days"
-    },
-    {
       "description": "Schedule non-major updates during typical non-office hours on weekdays (10 PM - 5 AM)",
-      "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "schedule": "* 0-4,22-23 * * 1-5",
-      "groupName": "devDependencies (non-major)",
-      "automergeType": "pr",
-      "automergeStrategy": "rebase",
-      "semanticCommitType": "chore",
-      "semanticCommitScope": "deps",
+      "groupName": "dependencies(non-major)",
       "automerge": true
+    },
+    {
+      "description": "Schedule linter and formatter updates on Monday mornings (before 4 AM)",
+      "matchDepTypes": ["devDependencies"],
+      "schedule": "* 0-3 * * 1",
+      "matchPackageNames": ["oxlint", "oxfmt", "ultracite"],
+      "groupName": "linters/formatters devdependencies(non-major)",
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
+      "description": "Block major updates and require manual dashboard approval",
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true,
+      "automerge": false
     }
   ]
 }
