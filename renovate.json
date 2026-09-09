@@ -1,14 +1,16 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices", ":seperateMultipleMajorReleases"],
-  "semanticCommits": "enabled",
-  "ignoreTests": false,
-  "assignAutomerge": true,
+  "extends": [
+    "config:best-practices",
+    ":separateMultipleMajorReleases",
+    ":automergeRequireAllStatusChecks",
+    ":semanticCommits",
+    ":automergePr"
+  ],
   "timezone": "Europe/Paris",
   "minimumReleaseAge": "14 days",
   "automerge": true,
   "automergeStrategy": "rebase",
-  "automergeType": "pr",
   "packageRules": [
     {
       "internalChecksFilter": "strict",
