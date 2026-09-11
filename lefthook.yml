@@ -1,5 +1,21 @@
-remotes:
-  - git_url: https://github.com/JohanTran02/lefthook-configs
-    configs:
-      - configs/global.yml
-      - configs/ts.yml
+prepare-commit-msg:
+  commands:
+    commitzen:
+      skip:
+        - rebase
+      interactive: true
+      run: exec < /dev/tty && npx cz --hook || true
+      env:
+        LEFTHOOK: "0"
+
+commit-msg:
+  commands:
+    "lint commit message":
+      run: npx commitlint --edit {1}
+
+pre-commit:
+  commands:
+    lint:
+      run: npx ultracite fix --type-aware --type-check {staged_files}
+      glob: "**/*.{js,jsx,ts,tsx,json,jsonc,css}"
+      stage_fixed: true
