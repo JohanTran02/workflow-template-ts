@@ -3,6 +3,7 @@ name: autofix.ci
 on:
   push:
     branches-ignore:
+      - "main"
       - "renovate/**"
   pull_request:
     branches:
