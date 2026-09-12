@@ -1,18 +1,11 @@
 {
   "name": "workflow-template-ts",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/JohanTran02/workflow-template-ts#readme",
-  "bugs": {
-    "url": "https://github.com/JohanTran02/workflow-template-ts/issues"
-  },
   "license": "ISC",
   "author": "",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JohanTran02/workflow-template-ts.git"
-  },
   "type": "module",
   "main": "index.js",
   "scripts": {
