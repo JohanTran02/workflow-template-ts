@@ -7,6 +7,24 @@
     ":semanticCommits",
     ":automergePr"
   ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "extends": [
+      "schedule:weekly"
+    ]
+  },
+  "vulnerabilityAlerts": {
+    "labels": [
+      "security"
+    ],
+    "automerge": true,
+    "assignees": [
+      "@renovate-tests"
+    ],
+    "minimumReleaseAge": "14 days"
+  },
+  "osvVulnerabilityAlerts": true,
   "timezone": "Europe/Paris",
   "minimumReleaseAge": "14 days",
   "automergeStrategy": "rebase",
@@ -15,8 +33,12 @@
     {
       "customType": "regex",
       "description": "Update semantic-release version used by npx",
-      "managerFilePatterns": ["^\\.github/workflows/[^/]+\\.ya?ml$"],
-      "matchStrings": ["\\srun: npx semantic-release@(?<currentValue>.*?)\\s"],
+      "managerFilePatterns": [
+        "^\\.github/workflows/[^/]+\\.ya?ml$"
+      ],
+      "matchStrings": [
+        "\\srun: npx semantic-release@(?<currentValue>.*?)\\s"
+      ],
       "datasourceTemplate": "npm",
       "depNameTemplate": "semantic-release"
     }
@@ -24,35 +46,57 @@
   "packageRules": [
     {
       "internalChecksFilter": "strict",
-      "matchDatasources": ["npm"],
+      "matchDatasources": [
+        "npm"
+      ],
       "minimumReleaseAge": "14 days"
     },
     {
       "description": "Schedule non-major updates during typical non-office hours on weekdays (10 PM - 5 AM)",
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
       "schedule": "* 0-4,22-23 * * 1-5",
       "groupName": "dependencies(non-major)",
       "automerge": true
     },
     {
       "description": "Schedule non-major updates during typical non-office hours on weekdays (10 PM - 5 AM)",
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
       "schedule": "* 0-4,22-23 * * 1-5",
       "groupName": "devdependencies(non-major)",
       "automerge": true
     },
     {
       "description": "Schedule linter and formatter updates on Monday mornings (before 4 AM)",
-      "matchDepTypes": ["devDependencies"],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
       "schedule": "* 0-3 * * 1",
-      "matchPackageNames": ["oxlint", "oxfmt", "ultracite"],
+      "matchPackageNames": [
+        "oxlint",
+        "oxfmt",
+        "ultracite"
+      ],
       "groupName": "linters/formatters devdependencies(non-major)",
       "automerge": true
     },
     {
       "description": "Block major updates and require manual dashboard approval",
-      "matchUpdateTypes": ["major"],
+      "matchUpdateTypes": [
+        "major"
+      ],
       "dependencyDashboardApproval": true,
       "automerge": false
     }
