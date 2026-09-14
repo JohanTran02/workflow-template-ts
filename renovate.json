@@ -12,7 +12,8 @@
     "automerge": true,
     "extends": [
       "schedule:weekly"
-    ]
+    ],
+    "minimumReleaseAge": null
   },
   "vulnerabilityAlerts": {
     "labels": [
