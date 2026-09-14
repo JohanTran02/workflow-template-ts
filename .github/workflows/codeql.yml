@@ -12,6 +12,8 @@
 name: "CodeQL Advanced"
 
 on:
+  push:
+    branches: ["main"]
   pull_request:
     branches: ["main"]
   merge_group:
@@ -33,10 +35,6 @@ jobs:
 
       # required to fetch internal or private CodeQL packs
       packages: read
-
-      # only required for workflows in private repositories
-      actions: read
-      contents: read
 
     strategy:
       fail-fast: false
