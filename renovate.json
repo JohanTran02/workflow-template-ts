@@ -42,7 +42,7 @@
     },
     {
       "description": "Schedule non-major updates during typical non-office hours on weekdays (10 PM - 5 AM)",
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest", "pinDigest"],
       "schedule": "* 0-4,22-23 * * 1-5",
       "groupName": "dependencies(non-major)",
       "automerge": true
@@ -50,7 +50,7 @@
     {
       "description": "Schedule non-major updates during typical non-office hours on weekdays (10 PM - 5 AM)",
       "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest", "pinDigest"],
       "schedule": "* 0-4,22-23 * * 1-5",
       "groupName": "devdependencies(non-major)",
       "automerge": true
