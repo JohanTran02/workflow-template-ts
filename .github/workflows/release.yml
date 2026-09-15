@@ -3,7 +3,9 @@ name: Release
 on:
   push:
     branches: "main"
-
+    paths-ignore:
+      - ".github/labels.yml"
+      - ".github/workflows/label-sync.yml"
 permissions:
   contents: read
 

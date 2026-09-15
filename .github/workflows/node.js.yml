@@ -3,8 +3,14 @@ name: Node.js CI
 on:
   push:
     branches: ["main"]
+    paths-ignore:
+      - ".github/labels.yml"
+      - ".github/workflows/label-sync.yml"
   pull_request:
     branches: ["main"]
+    paths-ignore:
+      - ".github/labels.yml"
+      - ".github/workflows/label-sync.yml"
   merge_group:
 
 permissions:
