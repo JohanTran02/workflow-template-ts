@@ -65,3 +65,7 @@
 - name: "type: user story"
   color: "7057ff"
   description: "Requirements expressed from the perspective of an end-user."
+
+- name: "ci/cd: workflow"
+  color: "000000"
+  description: "Automated build, test, and deployment configurations."
