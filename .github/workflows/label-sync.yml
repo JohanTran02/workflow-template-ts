@@ -3,6 +3,9 @@ name: Sync Labels
 on:
   workflow_dispatch:
 
+permissions:
+  issues: write
+
 jobs:
   label-sync:
     runs-on: ubuntu-latest
