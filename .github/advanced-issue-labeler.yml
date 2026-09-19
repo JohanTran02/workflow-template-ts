@@ -1,19 +1,19 @@
 policy:
   - template: ["bug_report.yml", "feature_request.yml"]
     section:
-      - id: [size]
+      - id: ["size"]
         block-list: []
         label:
           - name: "size: XS"
-            keys: "XS"
+            keys: ["XS"]
           - name: "size: S"
-            keys: "S"
+            keys: ["S"]
           - name: "size: M"
-            keys: "M"
+            keys: ["M"]
           - name: "size: L"
-            keys: "L"
+            keys: ["L"]
           - name: "size: XL"
-            keys: "XL"
+            keys: ["XL"]
 
       - id: ["priority"]
         block-list: []
