@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
     "module": "nodenext",
-    "lib": ["esnext"],
+    "lib": [
+      "esnext"
+    ],
     "target": "esnext",
-    "types": ["node"],
+    "types": [
+      "node"
+    ],
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
@@ -19,6 +23,9 @@
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+  },
+  "exclude": [
+    "node_modules",
+  ]
 }

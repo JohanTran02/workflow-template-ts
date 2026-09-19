@@ -1,3 +1,23 @@
+- name: "size: XS"
+  color: "d4edda"
+  description: "Extra Small: Trivial fix, typo, or minor tweak (under 1 hour)."
+
+- name: "size: S"
+  color: "f3e8ff"
+  description: "Small: Quick task or isolated bug fix (1-3 hours)."
+
+- name: "size: M"
+  color: "f8d7da"
+  description: "Medium: Standard feature or moderate code changes (1-2 days)."
+
+- name: "size: L"
+  color: "fef3c7"
+  description: "Large: Complex feature or large refactor (3-5 days)."
+
+- name: "size: XL"
+  color: "fadbd8"
+  description: "Extra Large: Massive effort, epic, or cross-team project (1+ weeks)."
+
 - name: "priority: critical"
   color: "b60205"
   description: "Critical blocks or system failures requiring immediate intervention."
