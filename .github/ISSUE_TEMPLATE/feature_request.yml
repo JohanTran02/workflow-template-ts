@@ -41,7 +41,6 @@ body:
       description: Please choose the size of this issue.
       multiple: false
       options:
-        - "None"
         - "XS"
         - "S"
         - "M"
@@ -57,7 +56,6 @@ body:
       description: Please choose the priority of the impact of this issue.
       multiple: false
       options:
-        - "None"
         - "Low"
         - "Medium"
         - "High"
