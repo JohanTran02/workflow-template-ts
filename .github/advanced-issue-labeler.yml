@@ -2,7 +2,7 @@ policy:
   - template: ["bug_report.yml", "feature_request.yml"]
     section:
       - id: [size]
-        block-list: ["None"]
+        block-list: []
         label:
           - name: "size: XS"
             keys: "XS"
@@ -16,7 +16,7 @@ policy:
             keys: "XL"
 
       - id: ["priority"]
-        block-list: ["None"]
+        block-list: []
         label:
           - name: "priority: low"
             keys: ["Low"]
