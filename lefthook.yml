@@ -17,5 +17,5 @@ pre-commit:
   commands:
     lint:
       run: npx ultracite fix --type-aware --type-check --no-error-on-unmatched-pattern {staged_files}
-      glob: "**/*.{js,jsx,ts,tsx}"
+      glob: "**/*.{js,jsx,ts,tsx,json,jsonc,css}"
       stage_fixed: true
