@@ -1,0 +1,6 @@
+{
+    "oxc.enable.oxlint": true,
+    "oxc.enable.oxfmt": true,
+    "oxc.enable": true,
+    "yaml.schemaStore.enable": true,
+}
