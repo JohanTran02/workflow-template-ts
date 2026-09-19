@@ -49,6 +49,38 @@ body:
       render: markdown
     validations:
       required: false
+
+  - type: dropdown
+    id: size
+    attributes:
+      label: Size
+      description: Please choose the size of this issue.
+      multiple: false
+      options:
+        - "None"
+        - "XS"
+        - "S"
+        - "M"
+        - "L"
+        - "XL"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Please choose the priority of the impact of this issue.
+      multiple: false
+      options:
+        - "None"
+        - "Low"
+        - "Medium"
+        - "High"
+        - "Critical"
+    validations:
+      required: false
+
   - type: textarea
     attributes:
       label: Anything else?

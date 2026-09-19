@@ -1,42 +1,47 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "GitHub issue forms + team labels",
-    "allOf": [
-        {
-            "$ref": "https://json.schemastore.org/github-issue-forms.json"
-        },
-        {
-            "type": "object",
-            "properties": {
-                "labels": {
-                    "type": "array",
-                    "description": "Team labels (informational only)",
-                    "items": {
-                        "uniqueItems": true,
-                        "type": "string",
-                        "enum": [
-                            "priority: critical",
-                            "priority: high",
-                            "priority: medium",
-                            "priority: low",
-                            "status: backlog",
-                            "status: can't reproduce",
-                            "status: confirmed",
-                            "status: in-progress",
-                            "status: needs information",
-                            "status: wontfix",
-                            "type: bug",
-                            "type: documentation",
-                            "type: duplicate",
-                            "type: epic",
-                            "type: feature",
-                            "type: question",
-                            "type: user story",
-                            "ci/cd: workflow"
-                        ]
-                    }
-                }
-            }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GitHub issue forms + team labels",
+  "allOf": [
+    {
+      "$ref": "https://json.schemastore.org/github-issue-forms.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "labels": {
+          "type": "array",
+          "description": "Team labels (informational only)",
+          "items": {
+            "uniqueItems": true,
+            "type": "string",
+            "enum": [
+              "priority: critical",
+              "priority: high",
+              "priority: medium",
+              "priority: low",
+              "status: backlog",
+              "status: can't reproduce",
+              "status: confirmed",
+              "status: in-progress",
+              "status: needs information",
+              "status: wontfix",
+              "type: bug",
+              "type: documentation",
+              "type: duplicate",
+              "type: epic",
+              "type: feature",
+              "type: question",
+              "type: user story",
+              "ci/cd: workflow",
+              "size: XS",
+              "size: S",
+              "size: M",
+              "size: L",
+              "size: XL"
+            ]
+          }
         }
-    ]
+      }
+    }
+  ]
 }
