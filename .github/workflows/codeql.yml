@@ -5,10 +5,12 @@ on:
     branches: ["main"]
     paths-ignore:
       - ".github/labels.yml"
+      - ".github/advanced-issue-labeler.yml"
   pull_request:
     branches: ["main"]
     paths-ignore:
       - ".github/labels.yml"
+      - ".github/advanced-issue-labeler.yml"
   merge_group:
   schedule:
     - cron: "22 17 * * 5"
