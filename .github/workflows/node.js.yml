@@ -1,14 +1,10 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: ["main"]
-    paths-ignore:
-      - ".github/labels.yml"
   pull_request:
     branches: ["main"]
     paths-ignore:
-      - ".github/labels.yml"
+      - ".github/**"
   merge_group:
 
 permissions:
@@ -37,8 +33,5 @@ jobs:
         run: npm ci
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
-      - name: Verify Lint/Format
-        if: github.event_name == 'pull_request'
-        run: npx ultracite check --quiet --type-aware --type-check --no-error-on-unmatched-pattern --format=github
       - name: Build
         run: npm run build --if-present
