@@ -10,7 +10,7 @@
     "renovate:validate": "npx --yes --package renovate -- renovate-config-validator",
     "check": "ultracite check",
     "fix": "ultracite fix",
-    "prepare": "test -n \"$CI\" || lefthook install"
+    "prepare": "lefthook install"
   },
   "dependencies": {
     "commitizen": "^4.3.2",
