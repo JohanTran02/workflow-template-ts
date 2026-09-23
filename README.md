@@ -39,7 +39,7 @@ This template integrates a suite of automated workflows and git hooks categorize
 
 ### 1. Generate Your Repository
 
-Click the green **"Use this template"** button at the top right of this repository page or click **[Direct Template Link](https://github.com)** to instantly create a new repository in your own account.
+Click the green **"Use this template"** button at the top right of this repository page or click **[Direct Template Link](https://github.com/JohanTran02/workflow-template-ts/generate)** to instantly create a new repository in your own account.
 
 ### 2. Setup Repository
 
