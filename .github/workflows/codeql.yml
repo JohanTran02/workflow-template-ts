@@ -3,14 +3,26 @@ name: "CodeQL Advanced"
 on:
   push:
     branches: ["main"]
-    paths-ignore:
-      - ".github/labels.yml"
-      - ".github/advanced-issue-labeler.yml"
+    paths:
+      - "**.ts"
+      - "**.tsx"
+      - "**.js"
+      - "**.jsx"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig.json"
+      - ".github/workflows/**"
   pull_request:
     branches: ["main"]
-    paths-ignore:
-      - ".github/labels.yml"
-      - ".github/advanced-issue-labeler.yml"
+    paths:
+      - "**.ts"
+      - "**.tsx"
+      - "**.js"
+      - "**.jsx"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig.json"
+      - ".github/workflows/**"
   merge_group:
   schedule:
     - cron: "22 17 * * 5"
