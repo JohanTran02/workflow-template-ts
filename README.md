@@ -1,6 +1,6 @@
 # 🚀 TypeScript Workflow Template
 
-Welcome to the ultimate **TypeScript Template** repository! This repository comes pre-configured with a modern, high-performance tooling ecosystem designed to automate code quality, dependency management, commit standards, and seamless continuous integration.
+Welcome to the **TypeScript Template** repository! This repository comes pre-configured with a modern, high-performance tooling ecosystem designed to automate code quality, dependency management, commit standards, and seamless continuous integration.
 
 ## 🛠️ Built-In Tooling & Plugins
 
@@ -9,15 +9,17 @@ This template integrates a suite of automated workflows and git hooks categorize
 ### Code Quality & Formatting
 
 - **[Ultracite](https://www.ultracite.ai/docs)**: Orchestrates ultra-fast linting and formatting powered internally by [**oxlint**](https://oxc.rs/docs/guide/usage/linter.html) and [**oxfmt**](https://oxc.rs/docs/guide/usage/formatter.html).
-- **[Autofix](https://autofix.ci/setup)**: Automatically fixes linting and formatting issues directly on your Pull Requests via GitHub Actions.
+- **[Autofix](https://autofix.ci/setup)**: Automatically fixes linting and formatting issues directly on your Pull Requests.
 
 ### Commit & Git Workflow
 
 - **[Lefthook](https://lefthook.dev/)**: A lightning-fast Git hooks manager that runs linters and commit checks locally before pushing.
-- **[Commitlint](https://commitlint.js.org/guides/getting-started.html)**: Enforces the Conventional Commits specification on your commit messages.
+- **[Commitlint](https://commitlint.js.org/guides/getting-started.html)**: Enforces the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/) on your commit messages.
 - **[Commitizen](https://github.com/commitizen/cz-cli)**: Provides a command-line wizard to help you write formatted commit messages.
 
 ### Project & Automation
+
+<!-- Add a configs folder for easier management -->
 
 - **[Semantic Release](https://semantic-release.org/intro/)**: Fully automates the package release workflow, determining version numbers and generating changelogs based on commit history.
 - **[Renovate](https://docs.renovatebot.com/getting-started/installing-onboarding/)**: Keeps your `npm` packages and GitHub Actions automatically updated via automated PRs.
@@ -26,35 +28,43 @@ This template integrates a suite of automated workflows and git hooks categorize
 
 - **[Label Sync](https://github.com/marketplace/actions/label-sync)**: Ensures standard issue labels are identical across your repositories.
 - **[Advanced Issue Labeler](https://github.com/marketplace/actions/advanced-issue-labeler)**: Dynamically assigns labels to new issues based on body content or template selection.
-- **[Issue Templates](.github/ISSUE_TEMPLATE/)**: Pre-configured issue templates located in `.github/ISSUE_TEMPLATE/` for streamlined **Bug Reports** and **Feature Requests**.
+- [**Issue Forms**](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms): Pre-configured issue forms for streamlined [**Bug Reports**](.github/ISSUE_TEMPLATE/bug_report.yml) and [**Feature Requests**](.github/ISSUE_TEMPLATE/feature_request.yml).
 
 ### Security & CI/CD
 
 - **[CodeQL](https://docs.github.com/en/code-security/concepts/code-scanning/codeql/codeql-code-scanning)**: Industry-grade static analysis engine by GitHub to discover vulnerabilities in your codebase.
-- **Node.js Build And Test Pipeline**: Automatically validates type safety, runs unit tests, and verifies production builds on every PR.
+- [**Node.js Build And Test Pipeline**](.github/workflows/node.js.yml): Automatically validates type safety, runs unit tests, and verifies production builds on every PR.
 
 ## 🚀 Getting Started
 
 ### 1. Generate Your Repository
 
-Click the **"Use this template"** button at the top right of this page to spin up a new repository.
+Click the green **"Use this template"** button at the top right of this repository page or click **[Direct Template Link](https://github.com)** to instantly create a new repository in your own account.
 
 ### 2. Setup Repository
 
-- **Add Renovate:** [Install the Hosted GitHub App](https://docs.renovatebot.com/getting-started/installing-onboarding/#hosted-githubcom-app) for your new repo.
-- **Sync Labels:**
-  - Navigate to your repository and click on **Actions** in the navigation bar.
-  - Select **Sync Labels** from the left sidebar, click the **Run workflow** dropdown, and trigger it manually.
+- **Add Renovate:** [Install the Hosted GitHub App](https://docs.renovatebot.com/getting-started/installing-onboarding/#hosted-githubcom-app) and grant it access to your newly generated repository.
+- **Sync Repository Labels:**
+  1. Navigate to your new repository on GitHub and click on the **Actions** tab.
+  2. Select **Sync Labels** from the left sidebar.
+  3. Click the **Run workflow** dropdown menu on the right and trigger it manually.
 
 ### 3. Local Setup
 
-Clone your new repository and install dependencies to automatically initialize git hooks:
+Run the following commands in your terminal to clone your newly generated repository and install the dependencies _(this will automatically initialize your Git hooks)_:
 
 ```bash
+# 1. Clone your new repo (Make sure to replace this with YOUR actual URL!)
+git clone https://github.com
+
+# 2. Move into the project directory
+cd YOUR-NEW-REPOSITORY
+
+# 3. Install dependencies and initialize git hooks
 npm install
 ```
 
-## ⚓ Git Hooks (Lefthook Ecosystem)
+## ⚓ [Git Hooks](https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks) (Lefthook Ecosystem)
 
 This template uses **Lefthook** to automate checks locally before code ever leaves your machine. The following hooks are pre-configured:
 
@@ -67,8 +77,8 @@ This template uses **Lefthook** to automate checks locally before code ever leav
 - `npm run fix` — Run both `oxlint` and `oxfmt` with Ultracite to auto-fix errors and format code.
 - `npm run check` — Audit format and lint rules across all files without modifying them.
 - `npm run prepare` — Syncs Lefthook hooks automatically on `npm install`.
-- `npm run build` — Compile the project for production. _(Referenced by CI workflow)_
-- `npm test` — Run the local test suite. _(Referenced by CI workflow)_
+- `npm run build` — Compile the project for production. _(Referenced by [CodeQl Workflow](.github/ISSUE_TEMPLATE/codeql.yml))_
+- `npm test` — Run the local test suite. _(Referenced by [CodeQl Workflow](.github/ISSUE_TEMPLATE/codeql.yml))_
 
 **Note** Define test and build commands in `package.json`. The CI pipeline runs these automatically if they are present, so you don't need to modify the workflow files.
 
