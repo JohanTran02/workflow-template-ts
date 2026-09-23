@@ -1,6 +1,6 @@
 # 🚀 TypeScript Workflow Template
 
-Welcome to the **TypeScript Template** repository! This repository comes pre-configured with a modern, high-performance tooling ecosystem designed to automate code quality, dependency management, commit standards, and seamless continuous integration.
+Welcome to the **TypeScript Workflow Template** repository! This repository comes pre-configured with a modern, high-performance tooling ecosystem designed to automate code quality, dependency management, commit standards, and seamless continuous integration.
 
 ## 🛠️ Built-In Tooling & Plugins
 
@@ -14,7 +14,7 @@ This template integrates a suite of automated workflows and git hooks categorize
 ### Commit & Git Workflow
 
 - **[Lefthook](https://lefthook.dev/)**: A lightning-fast Git hooks manager that runs linters and commit checks locally before pushing.
-- **[Commitlint](https://commitlint.js.org/guides/getting-started.html)**: Enforces the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/) on your commit messages.
+- **[Commitlint](https://commitlint.js.org/guides/getting-started.html)**: Enforces the [**Conventional Commits specification**](https://www.conventionalcommits.org/en/v1.0.0/) on your commit messages.
 - **[Commitizen](https://github.com/commitizen/cz-cli)**: Provides a command-line wizard to help you write formatted commit messages.
 
 ### Project & Automation
@@ -43,7 +43,7 @@ Click the green **"Use this template"** button at the top right of this reposito
 
 ### 2. Setup Repository
 
-- **Add Renovate:** [Install the Hosted GitHub App](https://docs.renovatebot.com/getting-started/installing-onboarding/#hosted-githubcom-app) and grant it access to your newly generated repository.
+- **Add Renovate:** [**Install the Hosted GitHub App**](https://docs.renovatebot.com/getting-started/installing-onboarding/#hosted-githubcom-app) and grant it access to your newly generated repository.
 - **Sync Repository Labels:**
   1. Navigate to your new repository on GitHub and click on the **Actions** tab.
   2. Select **Sync Labels** from the left sidebar.
@@ -66,21 +66,21 @@ npm install
 
 ## ⚓ [Git Hooks](https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks) (Lefthook Ecosystem)
 
-This template uses **Lefthook** to automate checks locally before code ever leaves your machine. The following hooks are pre-configured:
+This template uses **Lefthook** to automate checks locally before code ever leaves your machine. The following hooks are [**pre-configured**](lefthook.yml):
 
-- **`prepare-commit-msg` (Commit Wizard):** Intercepts standard `git commit` commands to automatically launch the interactive **Commitizen** wizard in your terminal.
-- **`commit-msg` (Message Linting):** Runs **Commitlint** against your commit message to guarantee it follows the Conventional Commits specification.
-- **`pre-commit` (Automated Fixes):** Runs `ultracite fix` on your staged files to handle formatting, linting, and type-aware diagnostics. Any automatically fixed files are re-staged before the commit completes.
+- **`prepare-commit-msg`:** Intercepts standard `git commit` commands to automatically launch the **Commitizen** in your terminal.
+- **`commit-msg`:** Runs **Commitlint** against your commit message to guarantee it follows the Conventional Commits specification.
+- **`pre-commit`:** Runs `ultracite fix` on your staged files to handle formatting, linting, and type-aware diagnostics. Any automatically fixed files are re-staged before the commit completes.
 
 ## 📋 Available Scripts
 
 - `npm run fix` — Run both `oxlint` and `oxfmt` with Ultracite to auto-fix errors and format code.
 - `npm run check` — Audit format and lint rules across all files without modifying them.
 - `npm run prepare` — Syncs Lefthook hooks automatically on `npm install`.
-- `npm run build` — Compile the project for production. _(Referenced by [CodeQl Workflow](.github/ISSUE_TEMPLATE/codeql.yml))_
-- `npm test` — Run the local test suite. _(Referenced by [CodeQl Workflow](.github/ISSUE_TEMPLATE/codeql.yml))_
+- `npm run build` — Compile the project for production. _(Referenced by [**CodeQL Workflow**](.github/ISSUE_TEMPLATE/codeql.yml))_
+- `npm test` — Run the local test suite. _(Referenced by [**CodeQL Workflow**](.github/ISSUE_TEMPLATE/codeql.yml))_
 
-**Note** Define test and build commands in `package.json`. The CI pipeline runs these automatically if they are present, so you don't need to modify the workflow files.
+**Note**: Define test and build commands in `package.json`. The CI pipeline runs these automatically if they are present, so you don't need to modify the workflow files.
 
 ## 📁 Repository Structure
 
