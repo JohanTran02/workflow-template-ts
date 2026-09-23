@@ -3,8 +3,15 @@ name: Node.js CI
 on:
   pull_request:
     branches: ["main"]
-    paths-ignore:
-      - ".github/**"
+    paths:
+      - "!.github/**"
+      - "**.js"
+      - "**.jsx"
+      - "**.ts"
+      - "**.tsx"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig.json" # Add paths based on your project
   merge_group:
 
 permissions:
@@ -33,5 +40,7 @@ jobs:
         run: npm ci
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
-      - name: Build
+      - name: Run Tests
+        run: npm test --if-present
+      - name: Run Build
         run: npm run build --if-present
