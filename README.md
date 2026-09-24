@@ -43,11 +43,18 @@ Click the green **"Use this template"** button at the top right of this reposito
 
 ### 2. Setup Repository
 
-- **Add Renovate:** [**Install the Hosted GitHub App**](https://docs.renovatebot.com/getting-started/installing-onboarding/#hosted-githubcom-app) and grant it access to your newly generated repository.
+- **Install Github Apps**
+  - Grant these apps permission to your newly generated repository.
+    - [**Renovate**](https://github.com/apps/renovate)
+    - [**Autofix**](https://github.com/marketplace/autofix-ci#pricing-and-setup)
 - **Sync Repository Labels:**
   1. Navigate to your new repository on GitHub and click on the **Actions** tab.
   2. Select **Sync Labels** from the left sidebar.
   3. Click the **Run workflow** dropdown menu on the right and trigger it manually.
+
+**Labels** ![Labels](labels.jpg)
+
+- **Note:** **Advanced Issue Labeler** auto-applies `size` and `priority` labels selected in [Bug Reports](.github/ISSUE_TEMPLATE/bug_report.yml) and [Feature Requests](.github/ISSUE_TEMPLATE/feature_request.yml) (configured [here](.github/advanced-issue-labeler.yml)).
 
 ### 3. Local Setup
 
