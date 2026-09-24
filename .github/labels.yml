@@ -1,21 +1,21 @@
 - name: "size: XS"
-  color: "d4edda"
+  color: "c3e6cb"
   description: "Extra Small: Trivial fix, typo, or minor tweak (under 1 hour)."
 
 - name: "size: S"
-  color: "f3e8ff"
+  color: "e2f0d9"
   description: "Small: Quick task or isolated bug fix (1-3 hours)."
 
 - name: "size: M"
-  color: "f8d7da"
+  color: "fff3cd"
   description: "Medium: Standard feature or moderate code changes (1-2 days)."
 
 - name: "size: L"
-  color: "fef3c7"
+  color: "ffe5d0"
   description: "Large: Complex feature or large refactor (3-5 days)."
 
 - name: "size: XL"
-  color: "fadbd8"
+  color: "f8d7da"
   description: "Extra Large: Massive effort, epic, or cross-team project (1+ weeks)."
 
 - name: "priority: critical"
@@ -75,7 +75,7 @@
   description: "A theme of work that contain sub-tasks."
 
 - name: "type: feature"
-  color: "fbca04"
+  color: "3dadff"
   description: "New feature or request."
 
 - name: "type: question"
