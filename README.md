@@ -54,7 +54,9 @@ Click the green **"Use this template"** button at the top right of this reposito
 
 **Labels** ![Labels](labels.jpg)
 
-- **Note:** **Advanced Issue Labeler** auto-applies `size` and `priority` labels selected in [Bug Reports](.github/ISSUE_TEMPLATE/bug_report.yml) and [Feature Requests](.github/ISSUE_TEMPLATE/feature_request.yml) (configured [here](.github/advanced-issue-labeler.yml)).
+- **Notes:**
+  - **Advanced Issue Labeler** auto-applies `size` and `priority` labels selected in [Bug Reports](.github/ISSUE_TEMPLATE/bug_report.yml) and [Feature Requests](.github/ISSUE_TEMPLATE/feature_request.yml) (configured [here](.github/advanced-issue-labeler.yml)).
+  - [**Label Schema**](.vscode/labels-schema.json) used for autocompletion in **VS Code** when modifying labels in Issue forms.
 
 ### 3. Local Setup
 
